@@ -310,7 +310,7 @@ window.event_data = {
             hoverColor: "",
             id: "owj34amy",
             target:
-              "./'một đời' - 14 Casper & Bon Nghiêm (feat (mp3cut.net).mp3",
+              "./I Do - 911 (Lyrics & Vietsub) - Fall In Luv (youtube).mp3",
             type: "click",
           },
           {
@@ -593,7 +593,7 @@ window.event_data = {
             nameFile:
               "EM ĐỒNG Ý (I DO) - ĐỨC PHÚC x 911 x KHẮC HƯNG - OFFICIAL MUSIC VIDEO - VALENTINE 2023 (mp3cut.net).mp3",
             target:
-              "./'một đời' - 14 Casper & Bon Nghiêm (feat (mp3cut.net).mp3",
+              "./I Do - 911 (Lyrics & Vietsub) - Fall In Luv (youtube).mp3",
             type: "click",
           },
           {
@@ -635,7 +635,7 @@ window.event_data = {
             nameFile:
               "EM ĐỒNG Ý (I DO) - ĐỨC PHÚC x 911 x KHẮC HƯNG - OFFICIAL MUSIC VIDEO - VALENTINE 2023 (mp3cut.net).mp3",
             target:
-              "./'một đời' - 14 Casper & Bon Nghiêm (feat (mp3cut.net).mp3",
+              "./I Do - 911 (Lyrics & Vietsub) - Fall In Luv (youtube).mp3",
             type: "click",
           },
           {

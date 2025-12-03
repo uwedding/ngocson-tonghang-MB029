@@ -23,7 +23,7 @@
 // Lưu form vào GG sheet
 
 const GOOGLE_SCRIPT_URL_THAM_DU =
-  "https://script.google.com/macros/s/AKfycbyYM6JHXJoDCklOxYczaeStHFtULuG8YexYf2y_y6EuaP3R_eZ4E7SYvftrqc1i7L7g/exec";
+  "https://script.google.com/macros/s/AKfycbzoJdLDatCBX-tdJOov0Uh2pzmJxqQfMrLGr209_IVIL1UqpLNfVV29man-yaxvX8O9UQ/exec";
 document.querySelector("#form").addEventListener("submit", function (e) {
   e.preventDefault();
   const form = e.target; // Lấy form để reset sau này
@@ -52,6 +52,7 @@ document.querySelector("#form").addEventListener("submit", function (e) {
       form.reset(); // Reset form sau khi submit thành công
       submitBtn.disabled = false;
       submitBtn.textContent = "GỬI NGAY";
+      fetchMessages();
     }) // Nếu Apps Script trả về JSON
     .then((res) => {
       submitBtn.disabled = false;
@@ -92,7 +93,7 @@ document.querySelector("#form").addEventListener("submit", function (e) {
 </style> */
 }
 
-const sheetID = "1CgWlIpiOBoMARvMBhmdSrhfqLCGUiI8NxFiNglAOmrs";
+const sheetID = "1Rm8kYYpw0pgGMaHONRgldPsSQkGVivjdx4AZMNdQiN4";
 const url = `https://docs.google.com/spreadsheets/d/${sheetID}/gviz/tq?tqx=out:json`;
 
 let messages = []; // Chuyển sang `let`
@@ -152,6 +153,8 @@ function showRandomToast() {
 
 // Bắt đầu auto show
 function startAutoShow() {
+  if (!messages.length) return; // không bắt đầu nếu chưa có dữ liệu
+  if (autoInterval) clearInterval(autoInterval); // dọn interval cũ (nếu có)
   showRandomToast();
   autoInterval = setInterval(showRandomToast, config.intervalTime);
   console.log("🚀 Auto notification đã bắt đầu");
