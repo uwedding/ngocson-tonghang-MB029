@@ -52,7 +52,7 @@ document.querySelector("#form").addEventListener("submit", function (e) {
       form.reset(); // Reset form sau khi submit thành công
       submitBtn.disabled = false;
       submitBtn.textContent = "GỬI NGAY";
-      fetchMessages();
+      // fetchMessages();
     }) // Nếu Apps Script trả về JSON
     .then((res) => {
       submitBtn.disabled = false;
@@ -187,10 +187,10 @@ async function fetchMessages() {
 }
 
 // Khởi tạo khi load trang
-window.addEventListener("load", () => {
-  console.log("🎉 Trang đã load xong");
-  fetchMessages(); // Gọi hàm load dữ liệu
-});
+// window.addEventListener("load", () => {
+//   console.log("🎉 Trang đã load xong");
+//   fetchMessages(); // Gọi hàm load dữ liệu
+// });
 
 // CountDown đếm ngược thời gian
 
